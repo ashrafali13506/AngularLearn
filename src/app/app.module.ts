@@ -12,6 +12,7 @@ import { PipeimplementComponent } from './pipes/pipeimplement/pipeimplement.comp
 import { PipeImplementation } from './pipes/pipeimplement/customePipe';
 import { customeDirective } from './pipes/pipeimplement/directive';
 import { DropdownComponent } from './dropdown/dropdown.component';
+import { DropdownusingserviceComponent } from './dropdownusingservice/dropdownusingservice.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { DropdownComponent } from './dropdown/dropdown.component';
     PipeImplementation,
     customeDirective,
     DropdownComponent,
+    DropdownusingserviceComponent,
 
   ],
   imports: [

@@ -1,0 +1,19 @@
+
+<form>
+<select (change)="updateCity($event)">
+
+  <option selected disabled>--Select State</option>
+  <option *ngFor="let state of states" value={{state.id}}>{{state.name}}</option>
+</select>
+
+
+<select>
+
+  <option selected disabled>--Select State</option>
+  <option *ngFor="let city of cities" value={{city.id}}>{{city.name}}</option>
+</select>
+
+
+<button ()></button>
+
+</form>
