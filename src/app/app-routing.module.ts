@@ -3,11 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { ActivateGuard } from './activate.guard';
 import { CanactivatechildGuard } from './canactivatechild.guard';
 import { demoComponent } from './components/demo/demo.component';
+
 import { SearchComponent } from './components/search/search.component';
 import { DeactivateGuard } from './deactivate.guard';
 import { RoutertestComponent } from './routertest/routertest.component';
 
 const routes: Routes = [
+
+
   {path:'search',component:SearchComponent,
   canActivateChild:[CanactivatechildGuard],
 

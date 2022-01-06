@@ -1,4 +1,4 @@
-<select (change)="updateStates($event.target)">
+<!-- <select (change)="updateStates($event.target)">
   <option selected disabled>Select Coryunt</option>
   <option *ngFor="let country of countries" [value]="country">{{country}}</option>
 </select>
@@ -9,4 +9,24 @@
   <option selected disabled>Select State</option>
   <option *ngFor="let state of states" [value]="states">{{state}}</option>
 
-</select>
+</select> -->
+
+
+<form [formGroup]="myForm" >
+  <input type="text" formControlName="name" placeholder="EnterName">
+  <select (change)="updateStates($event.target)" formControlName="state">
+    <option selected disabled>Select Coryunt</option>
+    <option *ngFor="let country of countries" [value]="country">{{country}}</option>
+  </select>
+
+
+
+  <select formControlName="city">
+    <option selected disabled>Select State</option>
+    <option *ngFor="let state of states" [value]="states">{{state}}</option>
+
+  </select>
+
+  <button (click)="updateDate()">Store Value</button>
+
+ </form>

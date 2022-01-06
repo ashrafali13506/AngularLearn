@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-dropdown',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DropdownComponent implements OnInit {
 
-  constructor() { }
+  constructor(private fb:FormBuilder) { }
+
+  myForm: FormGroup;;
 
   countries:string[]=["India","USA","AUS"];
   states:string[]=[];
@@ -16,6 +19,19 @@ export class DropdownComponent implements OnInit {
   ausStates:string[]=["Mel","syd","can"]
 
   ngOnInit(): void {
+
+    this.myForm=this.fb.group({
+      name:[''],
+      state:[''],
+      city:['']
+    })
+  }
+
+
+  updateDate()
+  {
+    alert(this.myForm.value.state)
+
   }
 
   updateStates(stateName: any)

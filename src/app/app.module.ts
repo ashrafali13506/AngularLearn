@@ -14,6 +14,8 @@ import { customeDirective } from './pipes/pipeimplement/directive';
 import { DropdownComponent } from './dropdown/dropdown.component';
 import { DropdownusingserviceComponent } from './dropdownusingservice/dropdownusingservice.component';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -27,11 +29,14 @@ import { DropdownusingserviceComponent } from './dropdownusingservice/dropdownus
     DropdownComponent,
     DropdownusingserviceComponent,
 
+
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+
+    ReactiveFormsModule
   ],
   providers: [],
   // {provide:LocationStrategy,useClass:HashLocationStrategy}
